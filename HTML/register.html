@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/register_style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <h1>Înregistrează-te ✨</h1>
+            <form class="register-form" action="#" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="username">Nume utilizator</label>
+                    <input type="text" name="username" id="username" placeholder="ex: DanDan" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@exemplu.com" required>
+                </div>
+                <div class="row two-col">
+                    <div>
+                        <label for="password">Parolă</label>
+                        <input type="password" name="password" id="password" placeholder="Parola ta" required>
+                    </div>
+                    <div>
+                        <label for="confirm_password">Confirmă parola</label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Repetă parola" required>
+                    </div>
+                </div>
+                <div class="row two-col">
+                    <div>
+                        <label for="dob">Data nașterii</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </div>
+                    <div>
+                        <label for="country">Țara</label>
+                        <select name="country" id="country">
+                            <option value="ro">România</option>
+                            <option value="jp">Japonia</option>
+                            <option value="uk">Marea Britanie</option>
+                            <option value="us">SUA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Genul</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="m"> Masculin</label>
+                        <label><input type="radio" name="gender" value="f"> Feminin</label>
+                        <label><input type="radio" name="gender" value="o"> Altul</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Interese</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="interests" value="anime"> Motor</label>
+                        <label><input type="checkbox" name="interests" value="manga"> Seriale</label>
+                        <label><input type="checkbox" name="interests" value="gaming"> Gaming</label>
+                        <label><input type="checkbox" name="interests" value="coding"> Coding</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="profile_pic">Poză de profil</label>
+                    <input type="file" name="profile_pic" id="profile_pic">
+                </div>
+                
+                <div class="actions">
+                    <button type="button" class="btn primary" onclick="window.location.href='home.html'">Creează Contul</button>
+                    <button type="reset" class="btn ghost">Resetează</button>
+                </div>
+                <p class="login-link">
+                    Ai deja cont? <a href="login.html">Mergi la login</a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

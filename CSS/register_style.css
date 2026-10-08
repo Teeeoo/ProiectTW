@@ -1,0 +1,157 @@
+body {
+    background-color: #2b2b2b;
+    color: #333333;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px; 
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.card h1 {
+    text-align: center;
+    color: #e63946;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.row {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #555555;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    background: #ffffff;
+    color: #333333;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 8px rgba(230, 57, 70, 0.3);
+}
+
+.two-col {
+    display: flex;
+    gap: 15px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+.radio-group, .checkbox-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+    border: none;
+}
+
+.btn.primary {
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+.btn.primary:hover {
+    background-color: #d62828;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+}
+
+.btn.ghost {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.btn.ghost:hover {
+    background-color: #e0e0e0;
+}
+
+.login-link {
+    margin-top: 25px;
+    text-align: center;
+    color: #666666;
+}
+
+.login-link a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #d62828;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .two-col {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card {
+        padding: 30px 20px;
+    }
+}
