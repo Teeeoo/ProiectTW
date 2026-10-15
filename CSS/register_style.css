@@ -1,39 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Oswald:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
 body {
-    background-color: #2b2b2b;
-    color: #333333;
+    background-color: #0f0f0f;
+    color: #ffffff;
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
+    /* Cyber grid pattern */
+    background-image: 
+        linear-gradient(rgba(230, 57, 70, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(230, 57, 70, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .page {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 10px; 
+    padding: 40px 10px;
     min-height: 100vh;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: rgba(30, 30, 30, 0.8);
     width: 100%;
-    max-width: 650px;
-    padding: 40px 50px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    padding: 50px 60px;
+    border-left: 4px solid #e63946;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+    position: relative;
+}
+
+/* System tech text */
+.card::before {
+    content: "REGISTRATION_NODE";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: 'Teko', sans-serif;
+    color: #e63946;
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.6;
 }
 
 .card h1 {
-    text-align: center;
-    color: #e63946;
-    margin-bottom: 30px;
-    font-size: 28px;
-    font-weight: 700;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 42px;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .row {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: left;
 }
 
@@ -41,31 +66,41 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 700;
-    color: #555555;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, input[type="file"] {
     width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    border: 2px solid #e0e0e0;
-    background: #ffffff;
-    color: #333333;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 2px solid #555;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    border-radius: 0;
 }
 
 input:focus, select:focus {
     outline: none;
-    border-color: #e63946;
-    box-shadow: 0 0 8px rgba(230, 57, 70, 0.3);
+    border-bottom: 2px solid #e63946;
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+/* Customizing date picker icon for dark theme */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.5;
 }
 
 .two-col {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 .two-col > div {
@@ -74,64 +109,78 @@ input:focus, select:focus {
 
 .radio-group, .checkbox-grid {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .radio-group label, .checkbox-grid label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     font-weight: 400;
-    color: #555;
+    color: #cccccc;
     margin-bottom: 0;
+    cursor: pointer;
+    text-transform: none;
+    font-size: 15px;
+}
+
+/* Custom Checkbox / Radio styling */
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #e63946;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
 
 .actions {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
-    gap: 15px;
+    margin-top: 40px;
+    gap: 20px;
 }
 
 .btn {
     padding: 14px 20px;
-    border-radius: 12px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     flex: 1;
     text-align: center;
     border: none;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
 }
 
 .btn.primary {
     background-color: #e63946;
     color: white;
-    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
 }
 
 .btn.primary:hover {
-    background-color: #d62828;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    background-color: #ffffff;
+    color: #e63946;
+    transform: scale(1.02);
 }
 
 .btn.ghost {
-    background-color: #f0f0f0;
-    color: #666;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #aaaaaa;
 }
 
 .btn.ghost:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 
 .login-link {
-    margin-top: 25px;
-    text-align: center;
-    color: #666666;
+    margin-top: 35px;
+    text-align: left;
+    color: #aaaaaa;
+    font-size: 15px;
 }
 
 .login-link a {
@@ -139,19 +188,25 @@ input:focus, select:focus {
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
+    text-transform: uppercase;
 }
 
 .login-link a:hover {
-    color: #d62828;
-    text-decoration: underline;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
     .two-col {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
     .card {
-        padding: 30px 20px;
+        padding: 40px 25px;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
     }
 }
