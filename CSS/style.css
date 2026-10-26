@@ -1,17 +1,103 @@
-body {
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* Step 3: Flexbox Navbar */
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 1rem;
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-bottom: 2px solid #e63946;
 }
-p {
-    color: #333;
+
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
-.text{
-    color: blue;
-    font-size: 20px;
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Step 5: Layout (Mobile First, then Desktop) */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr 3fr; 
+    }
+}
+
+.sidebar, .content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section { margin-bottom: 40px; }
+h2 { color: #e63946; margin-bottom: 15px; }
+
+/* Step 1: Specificity */
+.important {
+    color: red;
+    font-size: 18px;
     padding: 10px;
+}
+
+#regula-castigatoare {
+    color: #00ffcc; 
+}
+
+/* Step 2: Box Model */
+.box-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-a {
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #e63946;
+    background: #333;
+}
+
+.card-b {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #00ffcc;
+    background: #333;
+}
+
+/* CSS Grid Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1rem;
+}
+
+.grid-card {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 5px;
 }

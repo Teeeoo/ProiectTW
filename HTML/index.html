@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunitatea TW</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <!-- Step 3: Flexbox Navigation -->
+    <nav>
+        <div class="brand">TW_SYS</div>
+        <div class="nav-links">
+            <a href="#">Acasa</a>
+            <a href="#">Vault</a>
+            <a href="bootstrap-gallery.html">Bootstrap</a>
+        </div>
+    </nav>
+
+    <!-- Step 5: Responsive Layout (Sidebar + Main) -->
+    <div class="layout">
+        <aside class="sidebar">
+            <h3>Navigare Rapida</h3>
+            <p>Elementele meniului lateral.</p>
+        </aside>
+        
+        <main class="content">
+            <!-- Step 1: CSS Selectors -->
+            <section>
+                <h2>Pasul 1: Specificitate CSS</h2>
+                <p class="important" id="regula-castigatoare">Acest text ar trebui sa fie rosu din clasa, dar ID-ul il face verde neon pentru ca are specificitate mai mare.</p>
+            </section>
+
+            <!-- Step 2: CSS Box Model -->
+            <section>
+                <h2>Pasul 2: Box Model</h2>
+                <div class="box-container">
+                    <div class="card-a">Content-Box (Depaseste 200px)</div>
+                    <div class="card-b">Border-Box (Exact 200px)</div>
+                </div>
+            </section>
+
+            <!-- Step 4: CSS Grid Gallery -->
+            <section>
+                <h2>Pasul 4: Galerie Grid (Auto-fit)</h2>
+                <div class="gallery">
+                    <div class="grid-card">Card 1</div>
+                    <div class="grid-card">Card 2</div>
+                    <div class="grid-card">Card 3</div>
+                    <div class="grid-card">Card 4</div>
+                    <div class="grid-card">Card 5</div>
+                    <div class="grid-card">Card 6</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
